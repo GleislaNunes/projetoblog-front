@@ -18,16 +18,23 @@
 }
 
 .container button:hover {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+  box-shadow: red 7px 7px 0px;
   transform: scale(1.1);
 }
 
-.btn {
+.btn.secundary {
   border: solid 1px white;
   color: white;
   font-weight: 900;
   cursor: pointer;
-  background-color: palegreen;
+  background-color: blue;
   border-radius: 9px;
   padding: 6px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }

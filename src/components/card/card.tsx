@@ -17,7 +17,6 @@ export function Card({
   idPost,
   onDelete,
 }: CardProps) {
-  // Componente Card simplificado sem lógica de exclusão
   return (
     <div className="card">
       <h2>{title}</h2>

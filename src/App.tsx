@@ -38,7 +38,9 @@ function App() {
         ))}
       </div>
       {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
-      <button onClick={handleOpenModal}>New Post</button>
+      <button className="btn.secundary" onClick={handleOpenModal}>
+        New Post
+      </button>
     </div>
   );
 }
