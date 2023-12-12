@@ -1,4 +1,5 @@
 // App.js
+import "./App.css"
 import { useState } from "react";
 import { Navbar } from "./components/navbar/navbar";
 import { Card } from "./components/card/card";
@@ -38,7 +39,7 @@ function App() {
         ))}
       </div>
       {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
-      <button className="btn.secundary" onClick={handleOpenModal}>
+      <button className="btn-post" onClick={handleOpenModal}>
         New Post
       </button>
     </div>

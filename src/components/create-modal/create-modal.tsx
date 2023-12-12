@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { usePostDataMutate } from "../../hooks/usePostDataMutate";
-import { PostData } from "../../interface/PostData";
-import "./modal.css";
+import { useEffect, useState } from 'react';
+import { usePostDataMutate } from '../../hooks/usePostDataMutate';
+import { PostData } from '../../interface/PostData';
+import './modal.css';
 
 interface InputProps {
   //Essa linha define uma interface chamada InputProps. Essa interface define os dados que serão passados para a função Input().
@@ -19,10 +19,7 @@ const Input = ({ label, value, updateValue }: InputProps) => {
   return (
     <>
       <label>{label}</label>
-      <input
-        value={value}
-        onChange={(e) => updateValue(e.target.value)}
-      ></input>
+      <input value={value} onChange={e => updateValue(e.target.value)}></input>
     </>
   );
 };
@@ -34,7 +31,7 @@ const Textarea = ({ label, value, updateValue }: InputProps) => {
       <label>{label}</label>
       <textarea
         value={value}
-        onChange={(e) => updateValue(e.target.value)} //Esta linha atribui um manipulador de eventos onChange ao elemento textarea. O manipulador de eventos é chamado quando o usuário altera o valor da área de texto. O manipulador de eventos chama a função updateValue(), passando como argumento o valor atual da área de texto.
+        onChange={e => updateValue(e.target.value)} //Esta linha atribui um manipulador de eventos onChange ao elemento textarea. O manipulador de eventos é chamado quando o usuário altera o valor da área de texto. O manipulador de eventos chama a função updateValue(), passando como argumento o valor atual da área de texto.
       ></textarea>
     </>
   );
@@ -42,10 +39,10 @@ const Textarea = ({ label, value, updateValue }: InputProps) => {
 
 export function CreateModal({ closeModal }: ModalProps) {
   //Esta linha declara uma função chamada CreateModal. A função recebe uma propriedade chamada closeModal. A propriedade closeModal é um objeto do tipo Modal Props.
-  const [title, setTitle] = useState("");
-  const [date, setDate] = useState("");
-  const [image, setImage] = useState("");
-  const [text, setText] = useState("");
+  const [title, setTitle] = useState('');
+  const [date, setDate] = useState('');
+  const [image, setImage] = useState('');
+  const [text, setText] = useState('');
   const { mutate, isSuccess, isPending } = usePostDataMutate();
 
   const submit = () => {
@@ -55,7 +52,7 @@ export function CreateModal({ closeModal }: ModalProps) {
       title,
       date,
       image,
-      text,
+      text
     };
     mutate(postData); //Esta linha chama a função mutate(), passando como argumento o objeto postData. A função mutate() atualiza o estado do componente com os dados do objeto postData.
   };
@@ -75,9 +72,14 @@ export function CreateModal({ closeModal }: ModalProps) {
           <Input label="image" value={image} updateValue={setImage} />
           <Input label="text" value={text} updateValue={setText} />
         </form>
-        <button onClick={submit} className="btn-secondary">
-          {isPending ? "postando..." : "postar"}
-        </button>
+        <div className="btns">
+          <button onClick={submit} className="btn-postar">
+            {isPending ? 'Postando...' : 'Postar'}
+          </button>
+          <button onClick={closeModal} className="btn-voltar">
+            Voltar
+          </button>
+        </div>
       </div>
     </div>
   );

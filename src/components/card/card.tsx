@@ -23,7 +23,7 @@ export function Card({
       <h2>{date}</h2>
       <img src={image} alt="Post" />
       <p>{text}</p>
-      <button className="btn" onClick={() => onDelete(idPost)}>
+      <button className="btn-delete" onClick={() => onDelete(idPost)}>
         {" "}
         {/* Mudança para um elemento button */}
         Excluir

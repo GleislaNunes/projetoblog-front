@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const API_URL = "http://localhost:8080";
 
-export async function deletePostData(postId: any) {
+export async function deletePostData(postId: number) {
   console.log(postId);
   await axios.delete(`${API_URL}/posts/${Number(postId)}`);
 }
