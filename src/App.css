@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  background-color: aliceblue;
+}
+
+.container button {
+  background-color: pink;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  transition: all 0.1s linear 0.1s;
+}
+
+.container button:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+  transform: scale(1.1);
+}
+
+.btn {
+  border: solid 1px white;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: palegreen;
+  border-radius: 9px;
+  padding: 6px;
+}
