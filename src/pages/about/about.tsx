@@ -5,7 +5,7 @@ export function About() {
   return (
     <div className='container-about'>
       <Navbar/>
-      <img src="./" alt="" />
+      <div></div>
       <footer className='footer-div'>
         <Footer></Footer>
       </footer>

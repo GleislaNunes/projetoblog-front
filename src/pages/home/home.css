@@ -22,8 +22,3 @@
   transform: scale(1.1);
 }
 
-.footer-div{
-  display: flex;
-  height: 800px;
-  align-items: end;
-}
