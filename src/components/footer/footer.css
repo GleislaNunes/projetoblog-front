@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100vw;
+  color: #fff;
+  font-size: 10px;
+  background-color: #2b3035;
+  margin-bottom: 0px;
+  font-family: 'Silkscreen', sans-serif;
+}
+
+.credits:hover{
+  font-size: 20px;
+}
