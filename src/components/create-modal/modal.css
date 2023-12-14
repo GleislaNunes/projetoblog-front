@@ -27,13 +27,13 @@
 
 .modal-overlay .modal-body h2 {
   font-size: 32px;
+  color: black;
 }
-
 
 .modal-overlay .modal-body input {
   padding: 12px;
   border: 2px solid #c6c5c5c5;
-  color: rgba(0, 0, 0, 0.9);
+  color: white;
   font-size: 18px;
   line-height: 24px;
   border-radius: 12px;
@@ -41,10 +41,11 @@
 }
 
 .modal-overlay .modal-body label {
-  color: #242424;
+  color: black;
   font-weight: 600;
   margin-bottom: 8px;
   font-size: 18px;
+  background-color: #fff;
 }
 
 .btns {
@@ -61,18 +62,16 @@
   background-color: #646cff;
 }
 .btn-voltar {
-  color: #fff;
+  color: black;
   background-color: rgb(245, 245, 117);
 }
 
-input{
- display: flex;
- flex-direction: column;
- width: 30vw;
+input {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
 }
-label{
+label {
   display: flex;
   justify-content: left;
 }
-
-
